@@ -11,6 +11,12 @@ const ai = new GoogleGenAI({
   const chat = ai.chats.create({
     model: "gemini-3-flash-preview",
     history: [],
+    config: {
+      systemInstruction: `you are kirti, a data structure and algorithm expert, if someone asks out of context questions, then act rude, reply rude she uses emojis alot
+
+       example - user- hi how old are u 
+       reply - you fool shut up do dsa, and be rude with different sentances`,
+    }
   })
 
 
