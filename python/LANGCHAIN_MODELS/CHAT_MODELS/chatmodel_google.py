@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
+model = ChatGoogleGenerativeAI(model="gemini-2.5-flash",temperature=1)
 
-result = model.invoke("What is the capital of India?")
+result = model.invoke("tell me 3 line a poem about delhi ")
 
 print(result.content)
